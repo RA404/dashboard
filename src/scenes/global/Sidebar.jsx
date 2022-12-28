@@ -44,26 +44,24 @@ const Sidebar = () => {
 
   return (
     <Box
+      backgroundColor={colors.primary[400]}
+      height="100%"
       sx={{
-        "& .pro-sidebar-inner": {
-          background: `${colors.primary[400]} !important`,
-        },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
-        },
-        "& .pro-inner-item": {
-          padding: "5px 35px 5px 20px !important",
-        },
-        "& .pro-inner-item:hover": {
-          color: "#868dfb !important",
-        },
-        "& .pro-menu-item.active": {
-          color: "#6870fa !important",
-        },
       }}
     >
-      <ProSidebarProvider collapsed={isCollapsed}>
-        <Menu icon="square">
+      <ProSidebarProvider 
+        collapsed={isCollapsed}
+      >
+        <Menu
+          icon="square"
+          renderMenuItemStyles={() => ({
+            ".menu-anchor": {
+              "&:hover": {
+                backgroundColor: "#868dfb",
+              },
+            },
+          })}
+        >
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -110,7 +108,11 @@ const Sidebar = () => {
                 >
                   Repin Andrei
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]} sx={{ mb: "15px"}}>
+                <Typography
+                  variant="h5"
+                  color={colors.greenAccent[500]}
+                  sx={{ mb: "15px" }}
+                >
                   Full Stack Developer
                 </Typography>
               </Box>
