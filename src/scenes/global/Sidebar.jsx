@@ -17,6 +17,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import userProfilePhoto from "../../assets/user-photo.jpg";
 
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -43,22 +44,18 @@ const Sidebar = () => {
   const [selected, setSelected] = useState("Dashboard");
 
   return (
-    <Box
-      backgroundColor={colors.primary[400]}
-      height="100%"
-      sx={{
-      }}
-    >
       <ProSidebarProvider 
         collapsed={isCollapsed}
       >
+        
         <Menu
           icon="square"
-          renderMenuItemStyles={() => ({
+          renderMenuItemStyles={(active) => ({
             ".menu-anchor": {
               "&:hover": {
-                backgroundColor: "#868dfb",
+                backgroundColor: "#868dfb", 
               },
+              backgroundColor: active ? "transparent": "#eecef9",
             },
           })}
         >
@@ -222,8 +219,8 @@ const Sidebar = () => {
             </Box>
           )}
         </Menu>
+        
       </ProSidebarProvider>
-    </Box>
   );
 };
 

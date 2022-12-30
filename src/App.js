@@ -24,7 +24,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar />
+          <Sidebar 
+              // rootStyles={{
+              //   [`.${sidebarClasses.container}`]: {
+              //     backgroundColor: 'red',
+              //   },
+              // }}
+          />
           <main className='content'>
             <Topbar />
             <Routes>
