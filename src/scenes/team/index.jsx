@@ -14,7 +14,7 @@ const Team = () => {
 
     const columns = [
         {field: "id", headerName: "ID"},
-        {field: "name", headerName: "Field", flex: 1, cellClassName: "name-column--cell"},
+        {field: "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell"},
         {field: "email", headerName: "Email", flex: 1},
         {field: "age", headerName: "Age", type: "number", headerAlign: "left", align: "left"},
         {field: "phone", headerName: "Phone number", flex: 1},
@@ -49,7 +49,18 @@ const Team = () => {
     return (
         <Box m="20px">
             <Header Title="Team" subtitle="Managing the team member" />
-            <Box m="40px 0 0 0" height="75vh">
+            <Box 
+                m="40px 0 0 0" 
+                height="75vh"
+                sx={{
+                    "& .MuiDataGrid-root": {border: "none"},
+                    "& .MuiDataGrid-cell": {borderBottom: "none"},
+                    "& .name-column--cell": {color: colors.greenAccent[300]},
+                    "& .MuiDataGrid-columnHeader": {backgroundColor: colors.blueAccent[700], borderBottom: "none"},
+                    "& .MuiDataGrid-virtualScroller": {backgroundColor: colors.primary[400]},
+                    "& .MuiDataGrid-footerContainer": {backgroundColor: colors.blueAccent[700], borderTop: "none"},
+                }}
+            >
                 <DataGrid 
                     rows={mockDataTeam}
                     columns={columns}
