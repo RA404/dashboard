@@ -34,7 +34,7 @@ const Contacts = () => {
   return (
     <Box m="20px">
       <Header
-        Title="Contacts"
+        title="Contacts"
         subtitle="List of contacts for future reference"
       />
       <Box

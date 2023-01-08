@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ProSidebarProvider, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-//import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -17,24 +17,24 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import userProfilePhoto from "../../assets/user-photo.jpg";
 
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
   return (
-    <MenuItem
-      active={selected === title}
-      style={{
-        color: colors.gray[100],
-      }}
-      onClick={() => setSelected(title)}
-      icon={icon}
-      // routerLink={<Link to={to} />}
-      href={to}
-    >
-     
+      <MenuItem
+        active={selected === title}
+        onClick={() => setSelected(title)}
+        icon={icon}
+        routerLink={<Link to={to} />}
+        style={{
+          color: selected === title ? "#6870fa" : colors.gray[100],
+          backgroundColor: "transparent",
+        }}
+      >
         <Typography>{title}</Typography>
-        {/* <Link to={to}></Link> */}
-    </MenuItem>
+      </MenuItem>
   );
 };
 
@@ -47,15 +47,11 @@ const Sidebar = () => {
   return (
     <ProSidebarProvider collapsed={isCollapsed}>
       <Menu
+        style={{
+          width: isCollapsed ? "80px" : "350px",
+          backgroundColor: colors.primary[400],
+        }}
         icon="square"
-        renderMenuItemStyles={(active) => ({
-          ".menu-anchor": {
-            "&:hover": {
-              backgroundColor: "#868dfb",
-            },
-            backgroundColor: active ? "transparent" : "#eecef9",
-          },
-        })}
       >
         {/* LOGO AND MENU ICON */}
         <MenuItem
