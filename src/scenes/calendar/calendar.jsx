@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import FullCalendar from '@fullcalendar/react' // must go before plugins
+import FullCalendar from '@fullcalendar/react';
 import { formatDate } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 
@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
-//import { palette } from "@mui/system";
+
 
 const Calendar = () => {
   const theme = useTheme();
@@ -43,7 +43,7 @@ const Calendar = () => {
   const handleEventClick = (selected) => {
     if (
       window.confirm(
-        `Are you sure you want to delete the event "${selected.enent.title}?"`
+        `Are you sure you want to delete the event "${selected.event.title}?"`
       )
     ) {
       selected.event.remove();
