@@ -13,7 +13,7 @@ An experiment in creating infographics with React. Dashboards are popular now, a
 - formik
 - nivo
 
-## Video example and description
+## Video
 
 https://user-images.githubusercontent.com/61162669/211392592-179a7e00-6295-4a4d-bbcb-ea83c0bcc7a8.mp4
 
