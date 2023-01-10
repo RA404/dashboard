@@ -2,6 +2,8 @@
 
 An experiment in creating infographics with React. Dashboards are popular now, as well as the use of various ways of graphical display of information, for this reason I decided to create this application in order to better understand how to work with it in React.
 
+https://user-images.githubusercontent.com/61162669/211392592-179a7e00-6295-4a4d-bbcb-ea83c0bcc7a8.mp4
+
 ## Technology stack (components and libraries)
 
 - React
@@ -12,10 +14,6 @@ An experiment in creating infographics with React. Dashboards are popular now, a
 - material ui accordion
 - formik
 - nivo
-
-## Video
-
-https://user-images.githubusercontent.com/61162669/211392592-179a7e00-6295-4a4d-bbcb-ea83c0bcc7a8.mp4
 
 ## How to Install
 
