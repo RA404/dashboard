@@ -2,7 +2,7 @@
 
 An experiment in creating infographics with React. Dashboards are popular now, as well as the use of various ways of graphical display of information, for this reason I decided to create this application in order to better understand how to work with it in React.
 
-https://user-images.githubusercontent.com/61162669/211392592-179a7e00-6295-4a4d-bbcb-ea83c0bcc7a8.mp4
+https://user-images.githubusercontent.com/61162669/212270477-84ed40f2-92cc-4fe5-add4-9e004240dc32.mp4
 
 ## Technology stack (components and libraries)
 
