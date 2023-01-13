@@ -60,6 +60,7 @@ const Sidebar = () => {
           style={{
             margin: "10px 0 20px 0",
             color: colors.gray[100],
+            backgroundColor: "transparent",
           }}
         >
           {!isCollapsed && (
@@ -68,8 +69,9 @@ const Sidebar = () => {
               justifyContent="space-between"
               alignItems="center"
               ml="15px"
+              backgroundColor="transparent"
             >
-              <Typography variant="h3" color={colors.gray[100]}>
+              <Typography variant="h3" color={colors.gray[100]} backgroundColor="transparent">
                 ADMINIS
               </Typography>
               <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
