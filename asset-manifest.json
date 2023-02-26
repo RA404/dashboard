@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dashboard_admin_panel/static/css/main.a6c92b72.css",
+    "main.js": "/dashboard_admin_panel/static/js/main.54c09c8f.js",
+    "static/media/user-photo.jpg": "/dashboard_admin_panel/static/media/user-photo.5ea00ac759dfcea6cdea.jpg",
+    "static/media/SourceSansPro-Regular.ttf": "/dashboard_admin_panel/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
+    "static/media/SourceSansPro-SemiBold.ttf": "/dashboard_admin_panel/static/media/SourceSansPro-SemiBold.f2fa8f369db189665539.ttf",
+    "static/media/SourceSansPro-Bold.ttf": "/dashboard_admin_panel/static/media/SourceSansPro-Bold.2dec2f24e3bdf2c6862e.ttf",
+    "index.html": "/dashboard_admin_panel/index.html",
+    "main.a6c92b72.css.map": "/dashboard_admin_panel/static/css/main.a6c92b72.css.map",
+    "main.54c09c8f.js.map": "/dashboard_admin_panel/static/js/main.54c09c8f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6c92b72.css",
+    "static/js/main.54c09c8f.js"
+  ]
+}
