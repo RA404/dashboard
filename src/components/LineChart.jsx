@@ -10,40 +10,45 @@ const LineChart = ({ isDashboard = false }) => {
   return (
     <ResponsiveLine
       data={data}
-			theme={{
-				axis: {
-					domain: {
-						line: {
-							stroke: colors.gray[100],
-						},
-					},
-					legend: {
-						text: {
-							fill: colors.gray[100],
-						},
-					},
-					ticks: {
-						line: {
-							stroke: colors.gray[100],
-							strokeWidth: 1,
-						},
-						text: {
-							fill: colors.gray[100],
-						},
-					},
-					legends: {
-						text: {
-							fill: colors.gray[100],
-						},
-					},
-					tooltip: {
-						container: {
-							color: colors.primary[500],
-						},
-					},
-				},
-			}}
-			colors={isDashboard ? {datum: "color"} : {scheme: "nivo"}}
+      theme={{
+        axis: {
+          domain: {
+            line: {
+              stroke: colors.gray[100],
+            },
+          },
+          legend: {
+            text: {
+              fill: colors.gray[100],
+            },
+          },
+          ticks: {
+            line: {
+              stroke: colors.gray[100],
+              strokeWidth: 1,
+            },
+            text: {
+              fill: colors.gray[100],
+            },
+          },
+          legends: {
+            text: {
+              fill: colors.gray[100],
+            },
+          },
+          tooltip: {
+            container: {
+              color: colors.primary[500],
+            },
+          },
+        },
+        tooltip: {
+          container: {
+            color: colors.primary[500],
+          },
+        },
+      }}
+      colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       xScale={{ type: "point" }}
       yScale={{
@@ -68,7 +73,7 @@ const LineChart = ({ isDashboard = false }) => {
       }}
       axisLeft={{
         orient: "left",
-				tickValues: 5, 
+        tickValues: 5,
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
@@ -99,6 +104,7 @@ const LineChart = ({ isDashboard = false }) => {
           symbolSize: 12,
           symbolShape: "circle",
           symbolBorderColor: "rgba(0, 0, 0, .5)",
+          itemTextColor: colors.gray[100],
           effects: [
             {
               on: "hover",
