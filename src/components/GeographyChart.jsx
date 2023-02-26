@@ -33,6 +33,11 @@ const GeographyChart = ({ isDashboard = false }) => {
             },
           },
         },
+        tooltip: {
+          container: {
+            color: colors.primary[500],
+          },
+        },
         legends: {
           text: {
             fill: colors.gray[100],
